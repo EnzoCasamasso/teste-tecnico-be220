@@ -1,0 +1,39 @@
+<ion-content class="ion-padding">
+  <h2>Entrar</h2>
+
+  <ion-list lines="none">
+    <ion-item>
+      <ion-input
+        type="email"
+        label="Email"
+        label-placement="floating"
+        [ngModel]="email()"
+        (ngModelChange)="email.set(($event ?? '').trim())"
+        autocomplete="email">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        type="password"
+        label="Senha"
+        label-placement="floating"
+        [ngModel]="password()"
+        (ngModelChange)="password.set($event ?? '')"
+        autocomplete="current-password">
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="login()" [disabled]="loadingService.loading()">
+    @if(loadingService.loading()) {
+      <ion-spinner name="crescent" slot="start"></ion-spinner>
+    } @else {
+      Entrar
+    }
+  </ion-button>
+
+  @if(error()) {
+    <p style="color:var(--ion-color-danger);margin-top:8px">{{ error() }}</p>
+  }
+</ion-content>

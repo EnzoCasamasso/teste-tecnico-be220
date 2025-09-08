@@ -4,7 +4,7 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>UsinaPlay</ion-list-header>
-          <ion-note>admin@admin.com</ion-note>
+          <ion-note>{{ authService.email() }}</ion-note>
 
           @for (p of appPages; track p; let i = $index) {
             <ion-menu-toggle auto-hide="false">
@@ -15,6 +15,12 @@
             </ion-menu-toggle>
           }
         </ion-list>
+        <div>
+          <ion-button expand="block" color="danger" fill="clear" (click)="logout()">
+            <ion-icon slot="start" name="log-out-outline"></ion-icon>
+            Sair
+          </ion-button>
+        </div>
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>

@@ -39,7 +39,8 @@ import {
   notificationsCircleSharp,
   addCircleOutline,
   accessibilityOutline,
-  trophyOutline
+  trophyOutline,
+  logOutOutline
 } from 'ionicons/icons';
 addIcons({ 
   homeOutline, 
@@ -63,7 +64,8 @@ addIcons({
   notificationsCircleSharp,  
   addCircleOutline,
   accessibilityOutline,
-  trophyOutline
+  trophyOutline,
+  logOutOutline
  });
 
 async function setupEdgeToEdge() {
