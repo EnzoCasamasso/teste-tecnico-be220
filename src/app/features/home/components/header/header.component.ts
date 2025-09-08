@@ -3,20 +3,15 @@ import { CommonModule } from '@angular/common';
 import {
   IonHeader, 
   IonToolbar, 
-  IonButtons, 
   IonButton, 
   IonIcon, 
-  IonBadge, 
   IonAvatar,
-  IonChip, 
   IonLabel, 
   IonMenuButton,
-  IonItem,
   IonRow,
   IonCol,
   IonTitle,
   IonGrid,
-  IonMenuToggle
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -35,8 +30,6 @@ import {
     IonLabel,
     IonMenuButton,
     IonGrid,
-    IonBadge,
-    IonMenuToggle
 ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']

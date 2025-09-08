@@ -1,12 +1,12 @@
 <div class="button card"
-     [class.has-image]="!!props?.image"
-     [class.has-label]="!!props?.label">
+     [class.has-image]="!!props.image"
+     [class.has-label]="!!props.label">
 
-  @if (props?.image) {
+  @if (props.image) {
     <ion-img [src]="props.image" class="fill"></ion-img>
   }
 
-  @if (props?.label && props?.subLabel) {
+  @if (props.label && props.subLabel) {
     <div class="center">
       <ion-icon class="big-icon" [name]="props.icon"></ion-icon>
       <div class="stack">
@@ -15,10 +15,10 @@
       </div>
     </div>
   }
-  @else if (props?.title || props?.subTitle) {
+  @else if (props.title || props.subTitle) {
     <div class="content">
       <div class="line">
-        @if (props?.icon) {
+        @if (props.icon) {
           <span class="icon-circle"><ion-icon [name]="props.icon"></ion-icon></span>
         }
         <div class="stack">
