@@ -4,7 +4,7 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>UsinaPlay</ion-list-header>
-          <ion-note>{{ authService.email() }}</ion-note>
+          <ion-note>{{ authService.currentUser()?.email }}</ion-note>
 
           @for (p of appPages; track p; let i = $index) {
             <ion-menu-toggle auto-hide="false">
