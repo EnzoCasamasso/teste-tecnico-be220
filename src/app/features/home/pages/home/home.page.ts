@@ -1,28 +1,30 @@
-import { IonContent, IonTitle, IonIcon } from '@ionic/angular/standalone';
+import { IonContent } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
-import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HeaderComponent } from '@features/home/components/header/header.component';
-import { HomeButtonComponent } from '@features/home/components/home-button/home-button.component';
 import { SectionComponent } from '@features/home/components/section/section.component';
+import { HomeButtonProps } from '@features/home/components/home-button/home-button.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
-  imports: [
-    CommonModule,
-    IonContent,
-    IonTitle,
-    HeaderComponent,
-    HomeButtonComponent,
-    IonIcon,
-    SectionComponent
-  ],
+  imports: [CommonModule, IonContent, HeaderComponent, SectionComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+  personalOnline: HomeButtonProps[] = [
+    { label: 'NOVO', subLabel: 'TREINO', icon: 'add-circle-outline', image: 'assets/home-buttons/gym2.png' },
+    { title: 'YOGA', image: 'assets/home-buttons/gym1.png' },
+  ];
 
-  constructor() { }
+  programas: HomeButtonProps[] = [
+    { title: 'LEVANTAMENTO DE PESO', subTitle: 'Continuar Trinando', image: 'assets/home-buttons/gym2.png' },
+    { title: 'YOGA', image: 'assets/home-buttons/gym1.png' },
+  ];
 
-  ngOnInit() {}
+  conteudos: HomeButtonProps[] = [
+    { title: '' },
+    { title: '' },
+  ];
 }

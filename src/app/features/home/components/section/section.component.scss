@@ -7,6 +7,14 @@
             font-size: 1.5rem;
             font-weight: bold;
         }
+        ion-badge {
+            border-radius: 50px;
+            color: var(--ion-color-contrast);
+        }
+        ion-icon {
+            width: 30px;
+            height: 30px;
+        }
         display: inline-flex;
         align-items: center;
     }

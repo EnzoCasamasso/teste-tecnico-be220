@@ -1,8 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import { IonIcon, IonCol, IonRow, IonGrid, IonImg } from '@ionic/angular/standalone';
+import { IonIcon, IonImg } from '@ionic/angular/standalone';
 
+export type HomeButtonProps = {
+  label?: string;
+  subLabel?: string;
+  title?: string;
+  subTitle?: string;
+  icon?: string;
+  image?: string;
+};
 @Component({
   selector: 'app-home-button',
   templateUrl: './home-button.component.html',
@@ -10,19 +18,9 @@ import { IonIcon, IonCol, IonRow, IonGrid, IonImg } from '@ionic/angular/standal
   imports: [
     CommonModule,
     IonIcon,
-    IonCol,
-    IonRow,
-    IonGrid,
     IonImg
 ]
 })
-export class HomeButtonComponent implements OnInit {
-  @Input() label!: string | null;
-  @Input() subLabel!: string | null;
-  @Input() title!: string | null;
-  @Input() subTitle!: string | null;
-  @Input() icon!: string | null;
-  @Input() image!: string | null;
-
-  ngOnInit() {}
+export class HomeButtonComponent {
+  @Input({ required: true }) props!: HomeButtonProps;
 }

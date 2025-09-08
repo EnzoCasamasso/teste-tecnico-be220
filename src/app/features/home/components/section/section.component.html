@@ -1,11 +1,15 @@
 <div class="container">
   <div class="title">
-    <ion-title>
-      {{ sectionTitle | uppercase }}
-    </ion-title>
-    <ion-icon name="add-circle-outline" size="large" color="primary"></ion-icon>
+    <ion-title>{{ title }}</ion-title>
+    @if (badge) { 
+      <ion-badge>{{ badge }}</ion-badge> 
+    }
+    @if (sectionIcon) { 
+      <ion-icon [name]="sectionIcon" color="primary"/> 
+    }
   </div>
-  <swiper-container 
+
+  <swiper-container
     class="swiper"
     slides-per-view="1.5"
     centered-slides="false"
@@ -15,15 +19,10 @@
     slides-offset-after="0"
     space-between="1"
   >
-  <!-- @for(prop of sectionProps; track prop ) {
-        <swiper-slide>
-          <app-home-button [buttonProops]="prop"/>
-        </swiper-slide>
-      } -->
-    <swiper-slide>
-      <div class="slide2">
-        <app-home-button image="assets/home-buttons/gym1.png"  title="YOGA"/>
-      </div>
-    </swiper-slide>
+    @for (item of items; track item) {
+      <swiper-slide>
+        <app-home-button [props]="item"/>
+      </swiper-slide>
+    }
   </swiper-container>
 </div>
