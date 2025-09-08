@@ -18,12 +18,12 @@ export class HomeComponent {
     { title: 'YOGA', image: 'assets/home-buttons/gym1.png' },
   ];
 
-  programas: HomeButtonProps[] = [
+  programs: HomeButtonProps[] = [
     { title: 'LEVANTAMENTO DE PESO', subTitle: 'Continuar Treinando', image: 'assets/home-buttons/gym2.png' },
     { title: 'YOGA', image: 'assets/home-buttons/gym1.png' },
   ];
 
-  conteudos: HomeButtonProps[] = [
+  contents: HomeButtonProps[] = [
     { title: '' },
     { title: '' },
   ];
