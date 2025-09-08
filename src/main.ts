@@ -37,7 +37,9 @@ import {
   bookmarkSharp, 
   homeSharp, 
   notificationsCircleSharp,
-  addCircleOutline
+  addCircleOutline,
+  accessibilityOutline,
+  trophyOutline
 } from 'ionicons/icons';
 addIcons({ 
   homeOutline, 
@@ -59,7 +61,9 @@ addIcons({
   bookmarkSharp, 
   homeSharp, 
   notificationsCircleSharp,  
-  addCircleOutline
+  addCircleOutline,
+  accessibilityOutline,
+  trophyOutline
  });
 
 async function setupEdgeToEdge() {
