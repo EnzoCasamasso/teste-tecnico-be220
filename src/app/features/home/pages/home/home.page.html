@@ -1,0 +1,84 @@
+<app-home-header/>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="title">
+      <ion-title>
+        PERSONAL ONLINE
+      </ion-title>
+      <ion-icon name="add-circle-outline" size="large" color="primary"></ion-icon>
+    </div>
+    <swiper-container 
+      class="swiper"
+      slides-per-view="1.5"
+      centered-slides="false"
+      initial-slide="0"
+      grab-cursor="true"
+      slides-offset-before="16"
+      slides-offset-after="0"
+      space-between="1"
+    >
+      <swiper-slide>
+        <app-home-button label="NOVO" subLabel="TREINO" icon="add-circle-outline" image="assets/home-buttons/gym2.png"/>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="slide2">
+          <app-home-button image="assets/home-buttons/gym1.png" title="YOGA"/>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  <div class="container">
+    <div class="title">
+      <ion-title>
+        PROGRAMAS
+      </ion-title>
+      <ion-badge>Novo</ion-badge>
+    </div>
+    <swiper-container 
+      class="swiper"
+      slides-per-view="1.5"
+      centered-slides="false"
+      initial-slide="0"
+      grab-cursor="true"
+      slides-offset-before="16"
+      slides-offset-after="0"
+      space-between="1"
+    >
+      <swiper-slide>
+        <app-home-button title="LEVANTAMENTO DE PESO" subTitle="Continuar Trinando" image="assets/home-buttons/gym2.png"/>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="slide2">
+        <app-home-button title="YOGA" image="assets/home-buttons/gym2.png"/>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  <div class="container">
+    <div class="title">
+      <ion-title>
+        CONTEÚDOS
+      </ion-title>
+    </div>
+    <swiper-container 
+      class="swiper"
+      slides-per-view="1.5"
+      centered-slides="false"
+      initial-slide="0"
+      grab-cursor="true"
+      slides-offset-before="16"
+      slides-offset-after="0"
+      space-between="1"
+    >
+      <swiper-slide>
+        <app-home-button/>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="slide2">
+          <app-home-button/>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</ion-content>

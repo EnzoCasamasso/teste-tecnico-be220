@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="title">
+    <ion-title>
+      {{ sectionTitle | uppercase }}
+    </ion-title>
+    <ion-icon name="add-circle-outline" size="large" color="primary"></ion-icon>
+  </div>
+  <swiper-container 
+    class="swiper"
+    slides-per-view="1.5"
+    centered-slides="false"
+    initial-slide="0"
+    grab-cursor="true"
+    slides-offset-before="16"
+    slides-offset-after="0"
+    space-between="1"
+  >
+  <!-- @for(prop of sectionProps; track prop ) {
+        <swiper-slide>
+          <app-home-button [buttonProops]="prop"/>
+        </swiper-slide>
+      } -->
+    <swiper-slide>
+      <div class="slide2">
+        <app-home-button image="assets/home-buttons/gym1.png"  title="YOGA"/>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</div>

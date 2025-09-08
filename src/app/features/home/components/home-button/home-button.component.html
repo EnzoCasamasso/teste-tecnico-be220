@@ -1,0 +1,36 @@
+<div class="button card"
+     [class.has-image]="!!image"
+     [class.has-label]="!!label">
+
+  @if (image) {
+    <ion-img [src]="image" class="fill"></ion-img>
+  }
+
+  @if (label && subLabel) {
+    <div class="center">
+      <ion-icon class="big-icon" [name]="icon || 'add-circle-outline'"></ion-icon>
+      <div class="stack">
+        <span class="subTitle">{{ label | uppercase }}</span>
+        <span class="title">{{ subLabel | uppercase }}</span>
+      </div>
+    </div>
+  }
+  @else if (title || subTitle) {
+    <div class="content">
+      <div class="line">
+        @if (icon) {
+          <span class="icon-circle"><ion-icon [name]="icon"></ion-icon></span>
+        }
+        <div class="stack">
+          <div class="subtitle">{{ subTitle }}</div>
+          <div class="title">{{ title | uppercase }}</div>
+        </div>
+      </div>
+    </div>
+  }
+  @else {
+    <div class="empty-bar">
+      <div class="block"></div>
+    </div>
+  }
+</div>
