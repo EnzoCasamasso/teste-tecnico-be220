@@ -6,6 +6,11 @@
     position: relative;
     overflow: hidden;
     margin-left: 20px;
+
+    & :active {
+        transform: scale(.98);
+        transition: transform .1s ease-in-out;
+    }
   
     &.has-image { 
         border: 0; 
