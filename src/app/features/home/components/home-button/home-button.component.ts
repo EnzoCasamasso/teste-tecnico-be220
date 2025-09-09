@@ -19,7 +19,7 @@ export type HomeButtonProps = {
     CommonModule,
     IonIcon,
     IonImg
-]
+  ]
 })
 export class HomeButtonComponent {
   @Input({ required: true }) props!: HomeButtonProps;

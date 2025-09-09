@@ -24,7 +24,7 @@ addIcons({
   accessibilityOutline,
   trophyOutline,
   logOutOutline
- });
+});
 
 async function setupEdgeToEdge() {
   await EdgeToEdge.enable();
