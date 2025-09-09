@@ -7,7 +7,7 @@
     overflow: hidden;
     margin-left: 20px;
 
-    & :active {
+    &:active {
         transform: scale(.98);
         transition: transform .500ms ease-in-out;
     }
