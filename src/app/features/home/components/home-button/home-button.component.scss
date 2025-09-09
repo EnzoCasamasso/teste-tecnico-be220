@@ -9,7 +9,7 @@
 
     & :active {
         transform: scale(.98);
-        transition: transform .1s ease-in-out;
+        transition: transform .500ms ease-in-out;
     }
   
     &.has-image { 
